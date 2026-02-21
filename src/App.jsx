@@ -115,7 +115,7 @@ function App() {
             </div>
           <a
             className="nav-btn"
-            href="https://github.com/yanfernandes"
+            href="https://github.com/yanffernandes"
             target="_blank"
             rel="noreferrer"
           >
@@ -144,7 +144,7 @@ function App() {
           <div className="hero-actions fade-up" style={{ animationDelay: '0.34s' }}>
             <a href="#projects" className="btn btn-primary">{t.ctaProjects}</a>
             <a
-              href="https://github.com/yanfernandes"
+              href="https://github.com/yanffernandes"
               target="_blank"
               rel="noreferrer"
               className="btn btn-secondary"
@@ -188,7 +188,7 @@ function App() {
               <div className="project-icon">⌨</div>
               <h3>{t.p1Title}</h3>
               <p>{t.p1Body}</p>
-              <a href="https://github.com/yanfernandes/nflab-macropad" target="_blank" rel="noreferrer">
+              <a href="https://github.com/yanffernandes/nflab-macropad" target="_blank" rel="noreferrer">
                 {t.repoLink}
               </a>
             </article>
@@ -197,7 +197,7 @@ function App() {
               <div className="project-icon">🖨</div>
               <h3>{t.p2Title}</h3>
               <p>{t.p2Body}</p>
-              <a href="https://github.com/yanfernandes/nflab-thermal-printer" target="_blank" rel="noreferrer">
+              <a href="https://github.com/yanffernandes/nflab-thermal-printer" target="_blank" rel="noreferrer">
                 {t.repoLink}
               </a>
             </article>
