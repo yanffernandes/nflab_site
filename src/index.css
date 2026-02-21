@@ -252,20 +252,48 @@ a {
 }
 
 .btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.85rem 1.4rem;
   border-radius: 999px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.78rem;
   font-weight: 700;
+  isolation: isolate;
 }
 
 .btn-primary {
-  border: 1px solid transparent;
-  background:
-    linear-gradient(#080808, #080808) padding-box,
-    conic-gradient(from var(--angle, 0deg), transparent 0%, var(--red) 14%, transparent 38%, transparent 100%) border-box;
-  animation: border-spin 3s linear infinite;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #080808;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 72%,
+    rgba(239, 35, 60, 0.95) 82%,
+    transparent 92%,
+    transparent 100%
+  );
+  animation: spin-ring 2.4s linear infinite;
+  z-index: -2;
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 999px;
+  background: #080808;
+  z-index: -1;
 }
 
 .btn-secondary {
@@ -476,12 +504,12 @@ a {
   }
 }
 
-@keyframes border-spin {
+@keyframes spin-ring {
   from {
-    --angle: 0deg;
+    transform: rotate(0deg);
   }
   to {
-    --angle: 360deg;
+    transform: rotate(360deg);
   }
 }
 
